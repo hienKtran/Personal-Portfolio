@@ -1,85 +1,106 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cookie popup test</title>
-    <link rel="stylesheet" href="cookie-popup.css" />
-  </head>
+	<head>
+		<title>My Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-751CX8MBK4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-  <body>
-    <h1>Cookie popup test page</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-      dignissimos voluptatibus consequatur quam. Doloremque aliquid cumque
-      aliquam necessitatibus saepe ullam dolor reprehenderit labore dolorem,
-      modi excepturi hic cum fugiat accusamus?
-    </p>
+            gtag('config', 'G-751CX8MBK4');
+        </script>
+	</head>
+	
 
-    <div id="cookie-popup">
-      <p>
-        By using this site you agree to the storing of cookies on your device to
-        enhance site navigation and to analyze site usage. Learn more about our
-        <a href="/cookie-policy">cookie policy</a>.
-      </p>
-      <p>
-        <button id="accept-cookies">Accept</button>
-      </p>
-    </div>
+	<body class="is-preload">
 
-    <script src="cookie-popup.js"></script>
-    // Description: This script is used to show a cookie popup on the website
-    // Get the cookie popup element
-    const cookiePopup = document.getElementById("cookie-popup");
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-    // Get the accept button
-    const acceptCookies = document.getElementById("accept-cookies");
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
 
-    // Function to set a cookie
-    function setCookie(cname, cvalue, exdays) {
-      const d = new Date();
-      d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
-      const expires = "expires=" + d.toUTCString();
-      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-    }
+							<!-- Header -->
+								<header id="header">
+                                    <a href="index.html" class="logo">
+                                        <strong>Hien Tran's Portfolio</strong></a>									
+                                      
+                                    <ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
 
-    // Function to check if the cookie has been set
-    function checkCookie() {
-      const cookieAccepted = getCookie("cookieAccepted");
-      if (cookieAccepted === "") {
-        // Show the cookie popup
-        cookiePopup.style.display = "block";
-      }
-    }
+							<!-- Content -->
+								<section>
+                    <header class="main">
+                      <h1>Cookie Policy</h1>
+                  </header>
+                  <p>This website uses cookies to enhance the user experience and track website performance. By using this website, you consent to the use of cookies in accordance with this Cookie Policy.</p>
+                  <h2>What Are Cookies</h2>
+                  <p>Cookies are small files stored on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and to provide information to website owners.</p>
+                  <h2>How We Use Cookies</h2>
+                  <p>We use cookies for the following purposes:</p>
+                  <ul>
+                      <li>To analyze website traffic and performance using Google Analytics.</li>
+                      <li>To personalize your experience on our website.</li>
+                      <li>To improve our website's functionality.</li>
+                  </ul>
+                  <h2>Controlling Cookies</h2>
+                  <p>You can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed. If you do this, however, you may have to manually adjust some preferences every time you visit a site and some services and functionalities may not work.</p>
+                </section>
 
-    // Function to get a cookie value
-    function getCookie(cname) {
-      const name = cname + "=";
-      const decodedCookie = decodeURIComponent(document.cookie);
-      const ca = decodedCookie.split(";");
-      for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == " ") {
-          c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
-      }
-      return "";
-    }
+						</div>
+					</div>
 
-    // Event listener for the accept button
-    acceptCookies.addEventListener("click", function () {
-      // Set the cookie
-      setCookie("cookieAccepted", "true", 30);
-      // Hide the cookie popup
-      cookiePopup.style.display = "none";
-    });
+				<!-- Sidebar -->
+                <div id="sidebar">
+                    <div class="inner">
+                    <!-- Menu -->
+                    <nav id="menu">
+                        <header class="major">
+                        <h2>Menu</h2>
+                        </header>
+                        <ul>
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="projects.html">My Projects</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="termsandconditions.html">Terms & Conditions</a></li>
+                        
+                        </ul>
+                        <!-- Footer -->
+                        <footer id="footer">
+                            
+                            <p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP<br>Content © Hien Tran 2024</a>.</p>
+                        </footer>
+                    </nav>
+                    <!-- close 'inner' div -->
+                    </div>
+                    <!-- close 'sidebar' div -->div>
+                </div>
 
-    // Call the checkCookie function
-    checkCookie();
+			</div>
 
-  </body>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
